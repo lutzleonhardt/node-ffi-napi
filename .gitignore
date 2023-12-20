@@ -24,5 +24,3 @@ deps/libffi/include/ffi.h
 deps/libffi/include/ffitarget.h
 deps/libffi/local.exp
 vgcore.*
-
-prebuilds/
