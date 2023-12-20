@@ -28,7 +28,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "get-uv-event-loop-napi-h": "^1.0.5",
-    "node-addon-api": "^3.0.0",
+    "node-addon-api": "^7.0.0",
     "node-gyp-build": "^4.2.1",
     "ref-napi": "github:lutzleonhardt/ref-napi",
     "ref-struct-di": "^1.1.0"
@@ -43,7 +43,7 @@
   },
   "scripts": {
     "install": "node-gyp-build",
-    "prebuild": "prebuildify --napi --tag-armv --tag-uv",
+    "prebuild": "prebuildify --napi --tag-armv --tag-uv --arch=x86",
     "prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))",
     "test": "node-gyp rebuild --directory test && nyc mocha --expose-gc --reporter spec"
   },
